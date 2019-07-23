@@ -1,0 +1,11 @@
+steps:
+- name: gcr.io/cloud-builders/docker
+  args: [build, --pull, -t, gcr.io/$PROJECT_ID/postgres-exporter:v0.5.1, postgres-exporter]
+  waitFor: ['-']
+- name: gcr.io/cloud-builders/docker
+  args: [build, --pull, -t, gcr.io/$PROJECT_ID/postgres-db-exporter:v0.5.1, postgres-db-exporter]
+  waitFor: ['-']
+
+images:
+- gcr.io/$PROJECT_ID/postgres-exporter:v0.5.1
+- gcr.io/$PROJECT_ID/postgres-db-exporter:v0.5.1
