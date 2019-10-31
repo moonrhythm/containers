@@ -1,4 +1,4 @@
-FROM wrouesnel/postgres_exporter:v0.6.0
+FROM wrouesnel/postgres_exporter:v0.7.0
 
 ENV PG_EXPORTER_EXTEND_QUERY_PATH=/config/queries.yaml
 ENV PG_EXPORTER_AUTO_DISCOVER_DATABASES=true

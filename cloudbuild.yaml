@@ -3,13 +3,13 @@ steps:
   args: [build, --pull, -t, gcr.io/$PROJECT_ID/kustomize:v3.1.0, kustomize]
   waitFor: ['-']
 - name: gcr.io/cloud-builders/docker
-  args: [build, --pull, -t, gcr.io/$PROJECT_ID/postgres-db-exporter:v0.6.0, postgres-db-exporter]
+  args: [build, --pull, -t, gcr.io/$PROJECT_ID/postgres-db-exporter:v0.7.0, postgres-db-exporter]
   waitFor: ['-']
 - name: gcr.io/cloud-builders/docker
-  args: [build, --pull, -t, gcr.io/$PROJECT_ID/postgres-exporter:v0.6.0, postgres-exporter]
+  args: [build, --pull, -t, gcr.io/$PROJECT_ID/postgres-exporter:v0.7.0, postgres-exporter]
   waitFor: ['-']
 
 images:
 - gcr.io/$PROJECT_ID/kustomize:v3.1.0
-- gcr.io/$PROJECT_ID/postgres-db-exporter:v0.6.0
-- gcr.io/$PROJECT_ID/postgres-exporter:v0.6.0
+- gcr.io/$PROJECT_ID/postgres-db-exporter:v0.7.0
+- gcr.io/$PROJECT_ID/postgres-exporter:v0.7.0
